@@ -1,0 +1,275 @@
+{% extends "base_auth.html" %} {% block head %}
+
+<title> Twitter | FakeDetector </title>
+
+<head>
+    <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="favicon" href="static/images/cv_favicon.png">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <!-- bootstrap  -->
+    <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="static/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="static/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="static//favicon-16x16.png">
+    <link rel="manifest" href="static/site.webmanifest">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arvo&family=Fredericka+the+Great&family=Merriweather:ital@1&family=Roboto+Slab&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap"
+        rel="stylesheet">
+    <script src="https://use.fontawesome.com/fc48d5c4b4.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+        rel="stylesheet">
+    <link href="static/css/style.css" rel="stylesheet">
+    <title>Skin Cancer Detection</title>
+
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap');
+    .container1 {
+        padding: 20px;
+        width: 1000px;
+        margin-left: 50%;
+        margin-top: 60%;
+        transform: translate(-50%, -50%);
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background: white;
+        -webkit-box-shadow: 2px 1px 21px -9px rgba(0, 0, 0, 0.38);
+        -moz-box-shadow: 2px 1px 21px -9px rgba(0, 0, 0, 0.38);
+        box-shadow: 2px 1px 21px -9px rgba(0, 0, 0, 0.38);
+    }
+    /* Full-width input fields */
+    input[type=number],
+
+    input[type=text],
+    input[type=password] {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        border: none;
+        background: #f7f7f7;
+        font-family: Montserrat, Arial, Helvetica, sans-serif;
+    }
+    
+    select {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        border: none;
+        background: #f7f7f7;
+        font-family: Montserrat, Arial, Helvetica, sans-serif;
+    }
+    
+    input[type=phone] {
+        width: 81%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        border: none;
+        background: #f7f7f7;
+    }
+    
+    input[type=text]:focus,
+    input[type=password]:focus,
+    input[type=phone]:focus,
+    select:focus {
+        background-color: #ddd;
+        outline: none;
+    }
+    /* Set a style for all buttons */
+    
+    button {
+        background-color: #0eb7f4;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+        font-size: 16px;
+        font-family: Montserrat, Arial, Helvetica, sans-serif;
+        border-radius: 10px;
+    }
+    
+    button:hover {
+        opacity: 1;
+    }
+    /* Change styles for signup button on extra small screens */
+    
+    @media screen and (max-width: 300px) {
+        .signupbtn {
+            width: 100%;
+        }
+    }
+    
+  .my-button {
+    background-color: #4CAF50;
+    border: none;
+    width: 300px;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+    .youtubeBtn {
+        position: fixed;
+        right: 20px;
+        transform: translatex(-50%);
+        top: 20px;
+        cursor: pointer;
+        transition: all .3s;
+        vertical-align: middle;
+        text-align: center;
+        display: inline-block;
+        background: #000;
+        padding: 2px 10px;
+        border-radius: 5px;
+    }
+    
+    .youtubeBtn i {
+        font-size: 20px;
+        float: left;
+    }
+    
+    .youtubeBtn a {
+        color: #ff0000;
+        animation: youtubeAnim 1000ms linear infinite;
+        float: right;
+    }
+    
+    .youtubeBtn a:hover {
+        color: #c9110f;
+        transition: all .3s ease-in-out;
+    }
+    
+    .youtubeBtn i:active {
+        transform: scale(.9);
+        transition: all .3s ease-in-out;
+    }
+    
+    .youtubeBtn span {
+        font-family: 'Lato';
+        font-weight: bold;
+        color: #fff;
+        display: block;
+        font-size: 12px;
+        float: right;
+        line-height: 20px;
+        padding-left: 5px;
+    }
+    label {
+      font-size: 20px;
+    }
+    input{
+        font-size: 18px;
+    }
+    select{
+        font-size: 18px;
+    }
+</style>
+</head>
+
+{% endblock head %} {% block hero %}
+
+{% endblock hero %} {% block main %}
+
+<div class="container1">
+
+    <center style="font-size: 25px; font-weight: bold;">
+
+        {% if isFake %}
+        <img style="width: 150px; height: 150px;"
+            src="https://cdn-icons-png.flaticon.com/512/5455/5455432.png" />
+        <br>
+        <h1>{{user}}</h1>
+        <br>
+
+        <!-- <p style="color: #c9110f;">Seems like it is fake account.</p> -->
+
+        {% else %}
+
+        <img style="width: 150px; height: 150px;"
+            src="https://www.kindpng.com/picc/m/410-4101289_ifunny-verified-symbol-png-clipart-png-download-google.png" />
+        <br>
+
+        <h1>{{user}}</h1>
+        <br>
+        
+        <!-- <p style="color: green;">Seems like it is real account.</p> -->
+
+        {% endif %}
+
+        <hr>
+        <br>
+        <h2 style="width: 80%;"><a>RF Prediction: {{ rf }} Account</a></h2><br>
+        <h2 style="width: 80%;"><a>SVM Prediction: {{ svm }} Account</a></h2><br>
+        <h2 style="width: 80%;"><a>ANN Prediction : {{ ann }} Account</a></h2><br>
+        <h2 style="width: 80%;"><a>GRU Prediction : {{ gru }} Account</a></h2><br>
+        <h2 style="width: 80%;"><a>LSTM Prediction : {{ lstm }} Account</a></h2><br>
+        <h2 style="width: 80%;"><a>HYBRID Model Prediction : {{ hybrid }} Account</a></h2><br>
+
+        <hr>
+
+        <br>
+        {% if filename %}
+
+        <img id="img3" style="display: block;" src="{{filename}}" width="1200"
+            height="900">
+        {% endif %}
+
+    </center>
+
+</div>
+
+{% endblock main %}
